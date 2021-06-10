@@ -16,25 +16,25 @@ class Nextactivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_nextactivity)
-
         elephant()
+
         click()
     }
 
     fun elephant(){
         imageView = findViewById(R.id.imageView)
         textView = findViewById(R.id.textView)
-        btnNxt = findViewById(R.id.btnNext)
+        btnNxt = findViewById(R.id.btnNxt)
         btn2Nxt = findViewById(R.id.btn2Nxt)
     }
     fun click(){
         btn2Nxt.setOnClickListener {
-            val intent = Intent(baseContext, MainActivity::class.java)
-            startActivity(intent)
+            val nxt = Intent(baseContext, MainActivity::class.java)
+            startActivity(nxt)
         }
         btnNxt.setOnClickListener {
-            val intent = Intent(baseContext, Gonextactivity::class.java)
-            startActivity(intent)
+            val next = Intent(baseContext, Gonextactivity::class.java)
+            startActivity(next)
         }
     }
 }

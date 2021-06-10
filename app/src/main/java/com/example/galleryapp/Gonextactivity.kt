@@ -12,11 +12,12 @@ class Gonextactivity : AppCompatActivity() {
     lateinit var tvpark: TextView
     lateinit var btnnext: Button
     lateinit var btnPrevious: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gonextactivity)
-        click()
         park()
+        click()
     }
     fun park(){
         imageView3 = findViewById(R.id.imageView3)
@@ -27,13 +28,13 @@ class Gonextactivity : AppCompatActivity() {
     }
     fun click(){
         btnPrevious.setOnClickListener {
-            val intent = Intent(baseContext, Nextactivity::class.java)
-            startActivity(intent)
+            val gon = Intent(baseContext, Nextactivity::class.java)
+            startActivity(gon)
         }
         btnnext.setOnClickListener {
 
-            val intent = Intent(baseContext, anotheractivity::class.java)
-            startActivity(intent)
+            val go = Intent(baseContext, anotheractivity::class.java)
+            startActivity(go)
         }
     }
 

@@ -15,6 +15,8 @@ class lastactivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lastactivity)
+
+
         gradPicture()
         clickGrad()
     }
@@ -27,8 +29,8 @@ class lastactivity : AppCompatActivity() {
 
     fun clickGrad(){
         btn4previous.setOnClickListener {
-            val intent = Intent(baseContext, anotheractivity::class.java)
-            startActivity(intent)
+            val last = Intent(baseContext, anotheractivity::class.java)
+            startActivity(last)
         }
     }
 }

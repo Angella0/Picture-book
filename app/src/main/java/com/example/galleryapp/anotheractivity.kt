@@ -16,8 +16,10 @@ class anotheractivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_anotheractivity)
+
         babyLiam()
         clickNext()
+
     }
 
     fun babyLiam(){
@@ -29,12 +31,12 @@ class anotheractivity : AppCompatActivity() {
     }
     fun clickNext(){
         btn2previous.setOnClickListener {
-            val intent = Intent(baseContext, anotheractivity::class.java)
-            startActivity(intent)
+            val another = Intent(baseContext, Gonextactivity::class.java)
+            startActivity(another)
         }
         btn2next.setOnClickListener {
-            val intent = Intent(baseContext, lastactivity::class.java)
-            startActivity(intent)
+            val ano = Intent(baseContext, lastactivity::class.java)
+            startActivity(ano)
         }
     }
 }
